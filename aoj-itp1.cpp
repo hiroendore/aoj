@@ -1,3 +1,74 @@
+// 2017/09/17
+
+
+// ITP1_4_C
+#include<iostream>
+#include<cstdio>
+#define PI 3.141592653589
+using namespace std;
+int main(){
+	while(true){
+		int x,y,t;
+		char c; // 一文字:charで定義 
+		cin >> x >> c >> y;
+		if (c=='?') break;
+		int z;
+		switch(c){
+		  case '+':
+			z=x+y;
+			break;
+		  case '-':
+			z=x-y;
+			break;
+		  case '*':
+			z=x*y;
+			break;
+		  case '/':
+			z=x/y;
+			break;
+		}
+		printf("%d\n",z);
+	}
+	return 0;
+}
+
+// 	ITP1_4_B
+
+#include<iostream>
+#include<cstdio>
+#define PI 3.141592653589
+using namespace std; // define PI
+int main(){
+	double r;
+	cin >> r;
+	
+	double area, circ;
+	area = PI*r*r;
+	circ =2*PI*r;
+	printf("%.5f %.5f", area, circ);
+	
+	return 0;
+}
+
+// #480069 Solution for ITP1_4_A: A / B Problem by inuhachi
+
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main(){
+	int a,b;
+	int d,r;
+	double f; // double precision real number
+	
+	cin >> a >> b;
+	
+	d = a/b; // これはinteger
+	r = a%b;
+	f = double(a)/double(b) ; // double() 倍精度実数で表す
+	
+	printf("%d %d %.5f", d, r, f);  // %d:10進数で表示 %.5f:小数点5位まで
+}
+
 
 // 2017/09/16
 
