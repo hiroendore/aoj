@@ -1,3 +1,53 @@
+// 2017/09/26
+
+// ITP1_5_D
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,j,H,W; //input
+	while(1)
+	{
+		cin >> H >> W;
+		if( (H==0) && (W==0)) break; //ループを抜け出す（終わらせる）条件
+		for ( i=0; i<H; i++); //縦のループ
+		{
+			for ( j=0; j<W; j++); //横のループ
+			{
+				cout  <<  "#" ;
+			}
+			cout << endl; //横一列への出力を終わらせて改行する
+		}
+		cout << endl; //縦横ひとかたまり出力させ終わったので、一行あける
+	}
+	return 0;
+}
+
+
+// ITP1_4_D
+
+#include <iostream>
+#include <cstdio>
+using namespace std; //これを忘れてた
+int main()
+{
+  int n,a;
+  cin >> n;
+  
+  int min = 1000000, max = -1000000; //入力の整数の最大値最小値
+  long  sum = 0; // longじゃないとダメ？→longじゃないとダメだった
+    for (int i=0; i<n; i++)
+      {
+	cin >> a;//配列の入力これでOK?一列に入力がなってる場合
+	if (a<min) min = a; //初期条件なら（）内はtrue
+	if (a>max) max = a; //同様
+	sum += a; //sumを計算する
+      }
+  cout << min << " " << max << " " << sum << endl;
+  return 0;
+}
+　
 // test on tweeting commit on Github 5
 
 
