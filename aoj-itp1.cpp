@@ -1,6 +1,110 @@
+// 2017/10/15
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,n,x;
+	cin >> n;
+	for (i=1;i<n+1;i++)
+	{
+		if (i % 3 == 0) {
+			cout << " " << i;
+		} else {
+			x = i;
+			while (x) {
+				if (x % 10 == 3) {
+					cout << " " << i;
+					break;
+				}
+				x /= 10;
+			}
+		}
+	}
+	cout << endl;
+	return 0;
+}
+
+// ITP1_5_C
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,j,H,W;
+	char inic,midc;
+	while(1)
+	{
+		inic = 'o';
+		midc = 'o';
+		cin >> H >>W;
+		if ((H==0) && (W==0)) break;
+		for (i=0;i<H;i++)
+		{
+			switch(inic){
+			  case 'o':
+				inic = '#';
+				break;
+			  case '#':
+				inic = '.';
+				break;
+			  case '.':
+				inic = '#';
+				break;
+			}
+			cout << inic;
+			midc = inic;
+			for (j=1; j<W; j++)
+			{
+				switch(midc){
+				  case '#':
+					midc = '.';
+					break;
+				  case '.':
+					midc = '#';
+					break;
+				}
+				cout << midc;
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
+//ITP1_5_B
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, j, H, W;
+	while(1)
+	{
+		cin >> H >> W;
+		if ((H==0) && (W==0)) break;
+		for ( i=0; i<H; i++)
+		{
+			for ( j=0; j<W; j++)
+			{
+				if ((i==0) || (i==H-1) || (j==0) || (j==W-1)) {
+					cout << "#";
+					} 
+					else {
+					cout << "." ;
+					}
+			}
+			cout << endl; // 改行
+		}
+		cout << endl; //改行
+	}
+	return 0;
+}
+
 // 2017/09/26
 
-// ITP1_5_D
+
+// ITP1_4_D
 
 #include<iostream>
 using namespace std;
